@@ -13,7 +13,7 @@ const emailRequired = "Your email is required";
 exports.post = async (req, res, next) => {
 	let { email, picture } = req.body
 
-	try {
+	try { console.log(req.body)
 		if(!email){
 			return next(new ErrorResponse(emailRequired, 400))
 		}
